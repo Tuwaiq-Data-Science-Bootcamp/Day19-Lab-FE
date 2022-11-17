@@ -52,10 +52,13 @@ A mix between Ordinal and One-Hot encoding. Uses Ordinal encoding first then con
 
 
 ## Target Mean Encoding
-A mix between Ordinal and One-Hot encoding. Uses Ordinal encoding first then converts the number into Binary and splits it into columns.
-![image](https://user-images.githubusercontent.com/109832303/202405344-c70a07c8-1b3d-441f-b7d4-94b13ea40df2.png)
+Calculate the mean of all the target variables with the same category. Then replace all the relevant categories with that value.
+![image](https://user-images.githubusercontent.com/109832303/202406720-05b08a5b-d48e-4259-8d17-35a220d55a96.png)![image](https://user-images.githubusercontent.com/109832303/202407157-30852bac-c06f-423e-950b-b9fd06e0cd06.png)
+
+
 
 #### When to use: 
-- A better solution to One-Hot Encoding if number of features is large. (Produces less new columns)
+- A better solution to One-Hot Encoding if number of features is large. (Does not add redundant columns)
+- The tradeoff is that is is known to cause overfitting.
 
 
